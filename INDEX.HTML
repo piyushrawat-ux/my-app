@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My To-Do List</title>
+</head>
+<body>
+
+<h1>My Daily Tasks</h1>
+
+  <input id="taskBox" type="text" placeholder="Type a task">
+  <button onclick="addTask()">Add</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      var box = document.getElementById("taskBox");
+      var text = box.value;
+      if (text === "") return;
+
+      var item = document.createElement("li");
+      item.textContent = text;
+      document.getElementById("taskList").appendChild(item);
+
+      box.value = "";
+    }
+  </script>
+
+</body>
+</html>
